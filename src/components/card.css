@@ -1,0 +1,15 @@
+.card{
+    width: 300px;
+    height: 400px;
+    background-color: azure;
+    color: black;
+    text-align: center;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+table, th, td {
+    border: 2px solid azure;
+  }

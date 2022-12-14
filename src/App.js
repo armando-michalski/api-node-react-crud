@@ -1,24 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import ListaCards from './components/ListaCards';
+import ListaUsers from './components/ListaUsers';
+import Opcoes from './components/Opcoes'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 
+function Home(){
+  return(
+    <div>
+    <Opcoes></Opcoes>
+    <ListaCards></ListaCards>
+    </div>
+  )
+}
+
+function Users(){
+  return(
+    <div>
+    
+    <ListaUsers></ListaUsers>
+    </div>
+
+  )
+}
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+   
+    <div className="App-div">
+      
+      
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}>
+        </Route>
+        <Route path="/users" element={<Users />}>
+        </Route>
+      </Routes>
+      </BrowserRouter>
     </div>
+
   );
 }
 
